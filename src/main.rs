@@ -1,4 +1,4 @@
-use fibonacci::recursive_fibonacci;
+use fibonacci::iterative_fibonacci;
 use std::env;
 
 fn main() {
@@ -7,7 +7,7 @@ fn main() {
         .expect("Please provide an argument.")
         .parse::<u32>()
         .expect("The first argument must be a positive integer.");
-    let fibonacci = recursive_fibonacci(n);
+    let fibonacci = iterative_fibonacci(n);
 
     println!("The {}th Fibonacci number is {}", n, fibonacci);
 }
